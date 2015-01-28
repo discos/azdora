@@ -11,6 +11,9 @@ Vagrant.configure(2) do |config|
   config.vm.box_check_update = false
 
   config.vm.hostname = "azdora"
+  ####################################
+  # Insert here your IP informations
+  # ##################################
   config.vm.network "public_network", ip: "192.168.30.45"
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 80, host: 8081

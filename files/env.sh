@@ -1,1 +1,1 @@
-export SUBVERSION_HOME=/srv/svn
+export SUBVERSION_HOME=/data/ACS
