@@ -24,13 +24,13 @@ export INTROOT=/system/introot
 #export ACS_LOG_CENTRAL=5
 export ACS_CDB=/system/configuration
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-export MANAGER_REFERENCE=corbaloc::escsMaster:3000/Manager
+export MANAGER_REFERENCE=corbaloc::azdora:3000/Manager
 
 #specific for system compilation
 export TARGETSYS=MED
 export DOCROOT=/system/docroot
 export OPTIMIZE=0
-export SYSLOCATION=/system/sources
+export SYSLOCATION=/data/ACS/trunk
 export SVNUSER=azdora
 export SYSTEM_SVN_TAG=trunk
 
