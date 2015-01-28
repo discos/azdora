@@ -38,5 +38,9 @@ chown -R manager:acs /home/manager/.acs
 chown -R manager:acs /home/manager/.bashrc
 
 cd /system
-su - manager -c "getTemplateFirDirectory INTROOT introot"
+su - manager -c "getTemplateForDirectory INTROOT /system/introot"
+su - manager -c "mkdir -p /system/introot/ALARMS"
+su - manager -c "mkdir -p /system/introot/ERRORS"
+su - manager -c "mkdir -p /system/introot/LOGS"
+su - manager -c "mkdir -p /system/introot/CDT"
 cd ~
