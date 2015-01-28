@@ -31,6 +31,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "bash/python.sh"
   config.vm.provision "shell", path: "bash/ccfits.sh"
   config.vm.provision "shell", path: "bash/modbus.sh"
+  config.vm.provision "shell", path: "bash/gmock.sh"
   config.vm.provision "shell", path: "bash/svn.sh"
   config.vm.provision "shell", path: "bash/acs.sh"
 end
