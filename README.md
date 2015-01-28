@@ -11,7 +11,7 @@ On the host machine you will need to install:
 
 ## Customization
 
-Clone this repository and put yourself inthe azdora durectory. 
+Clone this repository and put yourself in the azdora directory. 
 You will need to insert correct IP address informations for the guest machine that we will create in these files: 
  
 ```
