@@ -44,3 +44,9 @@ su - manager -c "getTemplateForDirectory INTROOT /system/introot"
 #su - manager -c "mkdir -p /system/introot/LOGS"
 #su - manager -c "mkdir -p /system/introot/CDT"
 cd ~
+
+# SETTING UP MANAGER PYTHON ENVIRONMENT
+
+su - manager -c "easy_install-2.5 pip==1.3.1"
+su - manager -c "pip-2.5 --insecure install /vagrant/files/manager_requirements.txt"
+
