@@ -19,7 +19,6 @@ echo "creating directiry structure"
 mkdir -p /system
 mkdir -p /system/configuration
 mkdir -p /system/docroot
-mkdir -p /system/introot
 mkdir -p /system/sources
 mkdir -p /system/userbin
 mkdir -p /archive
@@ -38,3 +37,6 @@ cp -r /vagrant/files/bashrc /home/manager/.bashrc
 chown -R manager:acs /home/manager/.acs
 chown -R manager:acs /home/manager/.bashrc
 
+cd /system
+su - manager -c "getTemplateFirDirectory INTROOT introot"
+cd ~
