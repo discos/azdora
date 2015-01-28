@@ -7,7 +7,7 @@ This is a vagrant project used to setup the testing environment for Nuraghe/ESCS
 On the host machine you will need to install:
 
   * [Oracle VirtualBox](https://www.virtualbox.org/)
-  * [Vagrant](https://www.vagrantup.com/)
+  * [Vagrant](https://www.vagrantup.com/) (also installable via yum or apt)
 
 ## Customization
 
