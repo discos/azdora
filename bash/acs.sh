@@ -48,5 +48,5 @@ cd ~
 # SETTING UP MANAGER PYTHON ENVIRONMENT
 
 su - manager -c "easy_install-2.5 pip==1.3.1"
-su - manager -c "pip-2.5 --insecure install /vagrant/files/manager_requirements.txt"
+su - manager -c "pip-2.5 --insecure install -r /vagrant/files/manager_requirements.txt"
 
