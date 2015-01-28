@@ -1,0 +1,35 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+#alias getMake='cd $SYSLOCATION; svn checkout svn+ssh://$SVNUSER@belzebu.oa-cagliari.inaf.it/repos/ACS/tags/$SYSTEM_SVN_TAG/SystemMake'
+#alias getTrunk='cd $SYSLOCATION; svn checkout svn+ssh://$SVNUSER@belzebu.oa-cagliari.inaf.it/repos/ACS/trunk/'
+#alias getCDB='cd $ACS_CDB; ln -s $SYSLOCATION/trunk/Medicina/Configuration/CDB CDB'
+alias ll='ls -la'
+alias lt='ls -lt | more'
+alias gittree='git log --oneline --graph --decorate --color --all'
+function grepall() { find . -mount -type f -name "*$2" -print | xargs grep -i "$1" | more; }
+
+export INTROOT=/system/introot
+
+#. .acs/.bash_profile.acs
+. $HOME/.acs/.bash_profile.acs
+
+#specific for System runtime
+#export ACS_LOG_STDOUT=11
+#export ACS_LOG_CENTRAL=5
+export ACS_CDB=/system/configuration
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export MANAGER_REFERENCE=corbaloc::escsMaster:3000/Manager
+
+#specific for system compilation
+export TARGETSYS=SRT
+export DOCROOT=/system/docroot
+export OPTIMIZE=0
+export SYSLOCATION=/system/sources
+export SVNUSER=azdora
+
