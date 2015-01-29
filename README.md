@@ -1,6 +1,7 @@
 # AZDORA
 
 This is a vagrant project used to setup the testing environment for Nuraghe/ESCS software packages. 
+Simona likes it so much!!!
 
 ## Dependencies
 
