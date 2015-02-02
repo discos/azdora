@@ -1,4 +1,5 @@
 #!/bin/bash
 
 echo "Misc configurations"
-mkdir -p /srv
+
+#Put here any custom stuff

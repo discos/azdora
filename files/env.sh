@@ -1,1 +1,0 @@
-export SUBVERSION_HOME=/data/ACS

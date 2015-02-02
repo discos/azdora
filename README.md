@@ -12,19 +12,28 @@ On the host machine you will need to install:
 ## Customization
 
 Clone this repository and put yourself in the azdora directory. 
-You will need to insert correct IP address informations for the guest machine that we will create in these files: 
- 
-```
-files/hosts
-Vagrantfile
+*Vagrantfile* holds all the VM configuration parameters and in the last
+session you can ses a list of bash scripts which will be executed after
+OS installation:
+
+```ruby
+  config.vm.provision "shell", path: "bash/misc.sh"
+  config.vm.provision "shell", path: "bash/files.sh"
+  config.vm.provision "shell", path: "bash/users.sh"
+  config.vm.provision "shell", path: "bash/yum.sh"
+  config.vm.provision "shell", path: "bash/python.sh"
+  config.vm.provision "shell", path: "bash/ccfits.sh"
+  config.vm.provision "shell", path: "bash/modbus.sh"
+  config.vm.provision "shell", path: "bash/gmock.sh"
+  config.vm.provision "shell", path: "bash/svn.sh"
 ```
 
-Network configuration must be tweaked also in:
+**Order matters here** and there is no dependency check, so pay attention
+to how bash scripts are executed one after the other! 
 
-```
-files/resolv.conf
-bash/networking.sh
-```
+You can customize the scripts you find in
+the *bash* directory to your needs but in principle everything
+should just run fine.
 
 If you already have ACS.tar.gz package for ACS-8.2 you can copy it in the files directory, otherwise it will be downloaded from the internet (this may take some time). This is also valid for *CCfits-2.4.tar.gz  cfitsio3370.tar.gz libmodbus-3.0.6.tar.gz*
 

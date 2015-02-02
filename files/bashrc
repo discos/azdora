@@ -32,5 +32,9 @@ export DOCROOT=/system/docroot
 export OPTIMIZE=0
 export SYSLOCATION=/data/ACS/trunk
 export SVNUSER=azdora
+export REPO_ROOT=/data/ACS
+# this is for retrocompatibility
 export SYSTEM_SVN_TAG=trunk
+# this should include all the path to tag i.e. tags/noto-0.1 or trunk
+export SYSTEM_REPO_TAG=trunk
 
