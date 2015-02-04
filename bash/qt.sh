@@ -17,5 +17,5 @@ make
 make install
 cd
 rm -rf /tmp/$QTFILE
-echo "/usr/local/$QTVERSION" > /etc/lo.so.conf.d/qt4-i386.conf
+echo "/usr/local/$QTVERSION" > /etc/ld.so.conf.d/qt4-i386.conf
 
