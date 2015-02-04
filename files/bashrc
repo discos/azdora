@@ -37,4 +37,5 @@ export REPO_ROOT=/data/ACS
 export SYSTEM_SVN_TAG=trunk
 # this should include all the path to tag i.e. tags/noto-0.1 or trunk
 export SYSTEM_REPO_TAG=trunk
+export PATH=/usr/local/qt-4.5.2/bin/:$PATH
 

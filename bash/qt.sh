@@ -13,7 +13,9 @@ fi
 tar xzf /vagrant/files/$QTFILE.tar.gz -C /tmp
 cd /tmp/$QTFILE
 ./configure --prefix=/usr/local/$QTVERSION
-echo "o\nyes\n" | make
+make
 make install
 cd
 rm -rf /tmp/$QTFILE
+echo "/usr/local/$QTVERSION" > /etc/lo.so.conf.d/qt4-i386.conf
+

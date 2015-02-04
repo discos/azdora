@@ -15,6 +15,7 @@ chmod a+x xsum
 cp makefile.u Makefile
 make
 cp f2c.h /usr/local/include
+cp f2c /usr/local/bin
 cd
 
 
