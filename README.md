@@ -60,3 +60,17 @@ Use **vagrant** commands to start/stop/access the virtual machine, briefly:
 
 You can read the full vagrant documentation at http://vagrantup.com
 
+## Running in local system
+Azdora can also be used to install Nuraghe on a local system where OS is already installed without using
+any vagrant facility i.e. a plain old physical machine.
+You can use the provided script  **provision.sh** to run all the provisioning scripts on a running system. The script must be run as root:
+
+```bash
+[root@azdora vagrant]# ls
+bash  files  provision.sh  README.md  Vagrantfile
+[root@azdora vagrant]# whoami
+root
+[root@azdora vagrant]# bash provision.sh 
+```
+
+
