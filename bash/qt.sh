@@ -1,16 +1,23 @@
 #!/bin/bash
+if [ -z "$1" ];
+then
+    BASEDIR=/vagrant
+else
+    BASEDIR=$1
+fi
+
 QTVERSION=qt-4.5.2
 QTURL=http://download.qt.io/archive/qt/4.5/qt-x11-opensource-src-4.5.2.tar.gz
 QTFILE=qt-x11-opensource-src-4.5.2
 
 echo "installing $QTVERSION"
-if [ ! -f /vagrant/files/$QTFILE.tar.gz ];
+if [ ! -f $BASEDIR/files/$QTFILE.tar.gz ];
 then
 	echo "downloading qt ..."
-	cd /vagrant/files
+	cd $BASEDIR/files
 	wget $QTURL
 fi
-tar xzf /vagrant/files/$QTFILE.tar.gz -C /tmp
+tar xzf $BASEDIR/files/$QTFILE.tar.gz -C /tmp
 cd /tmp/$QTFILE
 ./configure --prefix=/usr/local/$QTVERSION
 make

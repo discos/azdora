@@ -1,9 +1,16 @@
 #!/bin/bash
 
-echo "installing f2c headers"
-cd /vagrant/files
+if [ -z "$1" ];
+then
+    BASEDIR=/vagrant
+else
+    BASEDIR=$1
+fi
 
-if [ -d /vagrant/files/f2c ];
+echo "installing f2c headers"
+cd $BASEDIR/files
+
+if [ -d $BASEDIR/files/f2c ];
 then
 	echo "found f2c directory"
 else

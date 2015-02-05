@@ -1,18 +1,25 @@
 #!/bin/bash
 
+if [ -z "$1" ];
+then
+    BASEDIR=/vagrant
+else
+    BASEDIR=$1
+fi
+
 echo "installing ACS"
 if [ -d /alma ];
 then 
 	echo "found /alma directory, skipping ACS extraction"
 else
-	if [ ! -f /vagrant/files/ACS.tar.gz ];
+	if [ ! -f $BASEDIR/files/ACS.tar.gz ];
 	then
 		echo "downloading ACS ..."
-		cd /vagrant/files
+		cd $BASEDIR/files
 		wget ftp://ftp.eso.org/projects/almasw/acs/public/OldReleases/ACS-8_2_0/ACS.tar.gz
 	fi
 	echo "extracting ACS into /alma"
-	tar xzpf /vagrant/files/ACS.tar.gz -C /
+	tar xzpf $BASEDIR/files/ACS.tar.gz -C /
 fi
 
 echo "creating directiry structure"
@@ -33,7 +40,7 @@ chown -R manager:acs /archive
 
 echo "setting up enironment for user manager"
 cp -r /alma/ACS-8.2/ACSSW/config/.acs /home/manager/
-cp -r /vagrant/files/bashrc /home/manager/.bashrc
+cp -r $BASEDIR/files/bashrc /home/manager/.bashrc
 chown -R manager:acs /home/manager/.acs
 chown -R manager:acs /home/manager/.bashrc
 
@@ -43,7 +50,6 @@ su - manager -c "getTemplateForDirectory INTROOT /system/introot"
 #su - manager -c "mkdir -p /system/introot/ERRORS"
 #su - manager -c "mkdir -p /system/introot/LOGS"
 #su - manager -c "mkdir -p /system/introot/CDT"
-cd ~
 
 # SETTING UP MANAGER PYTHON ENVIRONMENT
 
