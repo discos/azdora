@@ -24,6 +24,8 @@ fi
 . bash/gmock.sh $BASEDIR
 . bash/f2c.sh $BASEDIR
 . bash/svn.sh $BASEDIR
-. bash/jenkins.sh $BASEDIR
+#. bash/jenkins.sh $BASEDIR
 . bash/misc.sh $BASEDIR
 . bash/acs.sh $BASEDIR
+#. bash/qt.sh $BASEDIR
+#. bash/pyqt.sh $BASEDIR
