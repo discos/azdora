@@ -14,7 +14,21 @@ alias lt='ls -lt | more'
 alias gittree='git log --oneline --graph --decorate --color --all'
 function grepall() { find . -mount -type f -name "*$2" -print | xargs grep -i "$1" | more; }
 
-export INTROOT=/system/introot
+##############################################
+# DEFINING DEFAULT VALUES
+# we don't want to override existing values 
+# which can be defined by the testing 
+# or building bot
+##############################################
+if [ -z "$INTROOT" ]; then
+	export INTROOT=/system/introot
+fi
+if [ -z "$TARGETSYS" ]; then
+	export TARGETSYS=SRT
+fi
+if [ -z "$ACS_CDB" ]; then
+	export ACS_CDB=/system/configuration
+fi
 
 #. .acs/.bash_profile.acs
 . $HOME/.acs/.bash_profile.acs
@@ -22,12 +36,10 @@ export INTROOT=/system/introot
 #specific for System runtime
 #export ACS_LOG_STDOUT=11
 #export ACS_LOG_CENTRAL=5
-export ACS_CDB=/system/configuration
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export MANAGER_REFERENCE=corbaloc::azdora:3000/Manager
 
 #specific for system compilation
-export TARGETSYS=MED
 export DOCROOT=/system/docroot
 export OPTIMIZE=0
 export SYSLOCATION=/data/ACS/trunk
