@@ -11,7 +11,7 @@ GMOCK=gmock-1.7.0
 GMOCK_BASE_URL=https://googlemock.googlecode.com/files
 BUILDDIR=build
 
-echo "installing cfitsio"
+echo "installing gmock"
 if [ ! -f $BASEDIR/files/$GMOCK.zip ];
 then
 	echo "downloading $GMOCK.zip ..."
