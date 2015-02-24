@@ -43,6 +43,7 @@ export MANAGER_REFERENCE=corbaloc::azdora:3000/Manager
 export DOCROOT=/system/docroot
 export OPTIMIZE=0
 export SYSLOCATION=/data/ACS/trunk
+#Change the SVNUSER variable if installing for local development
 export SVNUSER=azdora
 export REPO_ROOT=/data/ACS
 # this is for retrocompatibility
