@@ -17,7 +17,6 @@ session you can ses a list of bash scripts which will be executed after
 OS installation:
 
 ```ruby
-  config.vm.provision "shell", path: "bash/misc.sh"
   config.vm.provision "shell", path: "bash/files.sh"
   config.vm.provision "shell", path: "bash/users.sh"
   config.vm.provision "shell", path: "bash/yum.sh"
@@ -25,7 +24,13 @@ OS installation:
   config.vm.provision "shell", path: "bash/ccfits.sh"
   config.vm.provision "shell", path: "bash/modbus.sh"
   config.vm.provision "shell", path: "bash/gmock.sh"
+  config.vm.provision "shell", path: "bash/f2c.sh"
+  config.vm.provision "shell", path: "bash/misc.sh"
+  config.vm.provision "shell", path: "bash/acs.sh"
   config.vm.provision "shell", path: "bash/svn.sh"
+  config.vm.provision "shell", path: "bash/qt.sh"
+  config.vm.provision "shell", path: "bash/pyqt.sh"
+  config.vm.provision "shell", path: "bash/jenkins.sh"
 ```
 
 **Order matters here** and there is no dependency check, so pay attention
