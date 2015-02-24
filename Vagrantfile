@@ -26,10 +26,9 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "bash/modbus.sh"
   config.vm.provision "shell", path: "bash/gmock.sh"
   config.vm.provision "shell", path: "bash/f2c.sh"
-  config.vm.provision "shell", path: "bash/svn.sh"
-  #config.vm.provision "shell", path: "bash/jenkins.sh"
   config.vm.provision "shell", path: "bash/misc.sh"
   config.vm.provision "shell", path: "bash/acs.sh"
+  config.vm.provision "shell", path: "bash/svn.sh"
   #########################################################
   #
   # Ci mette circa un ora a compilare e installare le qt
@@ -39,4 +38,8 @@ Vagrant.configure(2) do |config|
   #
   #config.vm.provision "shell", path: "bash/qt.sh"
   #config.vm.provision "shell", path: "bash/pyqt.sh"
+  #
+  # Uncomment the following line to also install jenkins
+  #
+  #config.vm.provision "shell", path: "bash/jenkins.sh"
 end
