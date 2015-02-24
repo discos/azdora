@@ -12,6 +12,8 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8081
 
   config.vm.provider "virtualbox" do |vb|
+    #uncomment to start VM with a GUI
+    #vb.gui = true
     vb.name = "azdora"
     vb.memory = "4096"
     vb.cpus = 2
@@ -25,7 +27,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "bash/gmock.sh"
   config.vm.provision "shell", path: "bash/f2c.sh"
   config.vm.provision "shell", path: "bash/svn.sh"
-  config.vm.provision "shell", path: "bash/jenkins.sh"
+  #config.vm.provision "shell", path: "bash/jenkins.sh"
   config.vm.provision "shell", path: "bash/misc.sh"
   config.vm.provision "shell", path: "bash/acs.sh"
   #########################################################

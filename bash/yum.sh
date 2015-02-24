@@ -7,10 +7,3 @@ yum install -y vim-enhanced subversion python26 python26-devel \
                expat expat-devel expect gsl gsl-devel \
                boost boost-devel \
                gnome-desktop gnome-desktop-devel
-wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
-cd /tmp
-wget https://jenkins-ci.org/redhat/jenkins-ci.org.key
-rpm --import jenkins-ci.org.key
-rm jenkins-ci.org.key
-yum install -y jenkins
-

@@ -7,6 +7,13 @@ else
     BASEDIR=$1
 fi
 
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+cd /tmp
+wget https://jenkins-ci.org/redhat/jenkins-ci.org.key
+rpm --import jenkins-ci.org.key
+rm jenkins-ci.org.key
+yum install -y jenkins
+
 cp $BASEDIR/files/etc.sysconfig.jenkins /etc/sysconfig/jenkins
 rm -rf /var/lib/jenkins
 tar xzfp $BASEDIR/files/var.lib.jenkins -C /var/lib

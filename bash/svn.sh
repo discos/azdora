@@ -14,4 +14,5 @@ chown -R manager:acs $SVNROOT
 #echo "checking out Nuraghe and ESCS"
 #su - manager
 #cd $SVNROOT
-#svn co belzebu/repos/ACS .
+#svn co svn+ssh://nuraghe-devel.oa-cagliari.inaf.it/ACS .
+
