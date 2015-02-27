@@ -1,6 +1,6 @@
 # AZDORA
 
-This is a vagrant project used to setup the testing environment for Nuraghe/ESCS software packages. 
+This is a vagrant project used to setup the testing environment for *DISCOS* software packages. 
 
 ## Dependencies
 
@@ -65,7 +65,7 @@ Use **vagrant** commands to start/stop/access the virtual machine, briefly:
 You can read the full vagrant documentation at http://vagrantup.com
 
 ## Running in local system
-Azdora can also be used to install Nuraghe on a local system where OS is already installed without using
+Azdora can also be used to install DISCOS on a local system where OS is already installed without using
 any vagrant facility i.e. a plain old physical machine.
 You can use the provided script  **provision.sh** to run all the provisioning scripts on a running system. By default the script will not install jenkins and the qt4 environment, just uncomment those lines if you want a complete azdora installation. 
 The script must be run as root:
