@@ -15,11 +15,13 @@ rm jenkins-ci.org.key
 yum install -y jenkins
 
 cp $BASEDIR/files/etc.sysconfig.jenkins /etc/sysconfig/jenkins
+tar xzvf -C /home/manager $BASEDIR/jenkins-backup.tar.gz
 rm -rf /var/lib/jenkins
 tar xzfp $BASEDIR/files/var.lib.jenkins -C /var/lib
 chown -R manager:acs /var/lib/jenkins
 chown -R manager:acs /var/log/jenkins
 chown -R manager:acs /var/cache/jenkins
+chown -R manager:acs /home/manager/azdora-backups
 
 /sbin/service jenkins restart
 
