@@ -1,4 +1,4 @@
-#!/b$BASEDIR
+#!/bin/bash
 if [ -z "$1" ];
 then
     BASEDIR=/vagrant

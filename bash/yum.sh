@@ -7,3 +7,5 @@ yum install -y vim-enhanced subversion python26 python26-devel \
                expat expat-devel expect gsl gsl-devel \
                boost boost-devel \
                gnome-desktop gnome-desktop-devel
+chkconfig yum-updatesd off
+service yum-updatesd stop
