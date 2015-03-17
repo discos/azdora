@@ -23,7 +23,7 @@ chown -R manager:acs /var/log/jenkins
 chown -R manager:acs /var/cache/jenkins
 chown -R manager:acs /home/manager/azdora-backups
 
-/sbin/service jenkins restart
+/sbin/service jenkins stop
 
 sleep 30
 cd
