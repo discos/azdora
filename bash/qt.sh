@@ -24,5 +24,9 @@ make
 make install
 cd
 rm -rf /tmp/$QTFILE
+
+#this is for compatibility with old build scripts
+ln -s /usr/local/$QTVERSION/bin/uic /bin/uic
+
 echo "/usr/local/$QTVERSION" > /etc/ld.so.conf.d/qt4-i386.conf
 
