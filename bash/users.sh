@@ -15,6 +15,6 @@ echo "adding users"
 echo manager:manager | /usr/sbin/chpasswd
 echo "generating new public key for user manager"
 su - manager -c "ssh-keygen -q -f ~/.ssh/id_rsa -t rsa -N \"\""
-cp /home/manager/.ssh/id_rsa.pub /vagrant/files/vm_manager_public_key.pub
+#cp /home/manager/.ssh/id_rsa.pub /vagrant/files/vm_manager_public_key.pub
 
 exit 0

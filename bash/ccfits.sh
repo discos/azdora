@@ -36,5 +36,6 @@ cd /tmp/CCfits
 ./configure --prefix=/usr/local
 make
 make install
-cd ~
+cd $BASEDIR
 rm -rf /tmp/CCfits
+

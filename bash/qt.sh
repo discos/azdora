@@ -29,4 +29,5 @@ rm -rf /tmp/$QTFILE
 ln -s /usr/local/$QTVERSION /usr/local/qt
 
 echo "/usr/local/$QTVERSION" > /etc/ld.so.conf.d/qt4-i386.conf
+cd $BASEDIR
 

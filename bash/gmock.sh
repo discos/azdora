@@ -39,5 +39,5 @@ chmod a+x *.a
 cp *.a /usr/local/lib
 cd $GMOCK_HOME/gtest/include
 cp -r gtest /usr/local/include
-cd ~
+cd $BASEDIR
 

@@ -50,5 +50,10 @@ su - manager -c "getTemplateForDirectory INTROOT /system/introot"
 # SETTING UP MANAGER PYTHON ENVIRONMENT
 
 su - manager -c "easy_install-2.5 pip==1.3.1"
-su - manager -c "pip-2.5 --insecure install -r /vagrant/files/manager_requirements.txt"
+cp $BASEDIR/files/manager_requirements.txt /tmp
+chown manager:acs /tmp/manager_requirements.txt
+su - manager -c "pip-2.5 --insecure install -r /tmp/manager_requirements.txt"
+rm /tmp/manager_requirements.txt
+cd $BASEDIR
+
 

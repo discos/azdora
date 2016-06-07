@@ -1,6 +1,7 @@
 ipython==1.0
 fabric
 unittest2
-astropy
+numpy==1.11.0
+astropy==1.1.0
 subprocess32
 

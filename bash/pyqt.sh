@@ -52,6 +52,5 @@ chown -R manager:acs /tmp/$PYQWT
 su - manager -c "cd /tmp/$PYQWT/configure; python configure.py -Q ../qwt-5.2"
 su - manager -c "cd /tmp/$PYQWT/configure; make"
 su - manager -c "cd /tmp/$PYQWT/configure; make install"
-cd
 rm -rf /tmp/$PYQWT
-
+cd $BASEDIR

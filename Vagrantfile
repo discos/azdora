@@ -16,22 +16,22 @@ Vagrant.configure(2) do |config|
     #uncomment to start VM with a GUI
     #vb.gui = true
     vb.name = "azdora"
-    vb.memory = 3200
-    vb.cpus = 1
+    vb.memory = 2400
+    vb.cpus = 2
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
     # uncomment the following line to disable pae on legacy systems
     #vb.customize ["modifyvm", :id, "--pae", "off"]
   end
-  #config.vm.provision "shell", path: "bash/files.sh"
-  #config.vm.provision "shell", path: "bash/users.sh"
-  #config.vm.provision "shell", path: "bash/yum.sh"
-  #config.vm.provision "shell", path: "bash/python.sh"
-  #config.vm.provision "shell", path: "bash/ccfits.sh"
-  #config.vm.provision "shell", path: "bash/modbus.sh"
-  #config.vm.provision "shell", path: "bash/gmock.sh"
-  #config.vm.provision "shell", path: "bash/f2c.sh"
-  #config.vm.provision "shell", path: "bash/misc.sh"
-  #config.vm.provision "shell", path: "bash/acs.sh"
+  config.vm.provision "shell", path: "bash/files.sh"
+  config.vm.provision "shell", path: "bash/users.sh"
+  config.vm.provision "shell", path: "bash/yum.sh"
+  config.vm.provision "shell", path: "bash/python.sh"
+  config.vm.provision "shell", path: "bash/ccfits.sh"
+  config.vm.provision "shell", path: "bash/modbus.sh"
+  config.vm.provision "shell", path: "bash/gmock.sh"
+  config.vm.provision "shell", path: "bash/f2c.sh"
+  config.vm.provision "shell", path: "bash/misc.sh"
+  config.vm.provision "shell", path: "bash/acs.sh"
   #########################################################
   #
   # Ci mette circa un ora a compilare e installare le qt
